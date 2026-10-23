@@ -1,0 +1,849 @@
+{
+  "schemaVersion": 1,
+  "newline": "lf",
+  "inputs": [
+    {
+      "id": "MoreDashModuleSettings",
+      "path": "MoreDasheline.MoreDashModuleSettings.decompiled.cs",
+      "sha256": "4ac7c640fe63f888a104cbb908985d39e158bfabd1dea6e27859bb8f736e4f46"
+    },
+    {
+      "id": "MoreDashelineSession",
+      "path": "MoreDasheline.MoreDashelineSession.decompiled.cs",
+      "sha256": "91c31a20530aaec4d2737a68caa15b5aa1e17d2167e73a7a1740fab5accdc362"
+    },
+    {
+      "id": "HairColorTrigger",
+      "path": "MoreDasheline.HairColorTrigger.decompiled.cs",
+      "sha256": "1bb1122693de0e79f44af692b329eadb58bd561d79cb113f69010dafd69758a1"
+    },
+    {
+      "id": "MaxDashTrigger",
+      "path": "MoreDasheline.MaxDashTrigger.decompiled.cs",
+      "sha256": "dd68ba23285e1701492a30f65c182366d7a331850042b533b23452697c81dd2b"
+    },
+    {
+      "id": "MoreDashelineModule",
+      "path": "MoreDasheline.MoreDashelineModule.decompiled.cs",
+      "sha256": "9c417790bbcf1be8fb2b595d9908156ac7e786f1976907536397d9dd1634c69a"
+    },
+    {
+      "id": "ColorHelper",
+      "path": "MoreDasheline.ColorHelper.decompiled.cs",
+      "sha256": "ad33cd257b78be6d56ea57da52a813f9e9e909463d8a63884ca6a24e2a548edb"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "Configuration/MoreDashSettings.cs",
+      "sha256": "8833f4fe964fb4f5a9ab59f92ed1db57121d22548c08a98efdf79546586cc0dc",
+      "segments": [
+        {
+          "literal": "using Celeste.Everest.Modules.Settings;\nusing Celeste.Everest.Settings.Metadata;\nnamespace Celeste.Mods.MoreDasheline.Configuration;\npublic sealed class MoreDashSettings : EverestModuleSettings\n{\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "MoreDashModuleSettings",
+            "type": "MoreDasheline.MoreDashModuleSettings",
+            "memberKind": "property",
+            "memberName": "ThreeDashColor",
+            "part": "full",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "MoreDashModuleSettings",
+            "type": "MoreDasheline.MoreDashModuleSettings",
+            "memberKind": "property",
+            "memberName": "FourDashColor",
+            "part": "full",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "MoreDashModuleSettings",
+            "type": "MoreDasheline.MoreDashModuleSettings",
+            "memberKind": "property",
+            "memberName": "FiveDashColor",
+            "part": "full",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "MoreDashModuleSettings",
+            "type": "MoreDasheline.MoreDashModuleSettings",
+            "memberKind": "property",
+            "memberName": "AllowOverridingColors",
+            "part": "full",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "literal": "}\n"
+        }
+      ]
+    },
+    {
+      "path": "Configuration/MoreDashSession.cs",
+      "sha256": "624b86fcd2990569099ac54a66883444af04224013e702a8c13a870fd3285010",
+      "segments": [
+        {
+          "literal": "using System.Collections.Generic;\nusing Celeste.Core.Display;\nusing Celeste.Everest.Modules.Persistence;\nnamespace Celeste.Mods.MoreDasheline.Configuration;\npublic sealed class MoreDashSession : EverestModuleSession\n{\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "MoreDashelineSession",
+            "type": "MoreDasheline.MoreDashelineSession",
+            "memberKind": "field",
+            "memberName": "OverrideHairColors",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "Runtime/MoreDashPlayerState.cs",
+      "sha256": "d25c6562f3a22d455957946300c25c61615bfeb6fb6b8f1817f44819b5b96cd8",
+      "segments": [
+        {
+          "literal": "namespace Celeste.Mods.MoreDasheline.Runtime;\ninternal sealed class MoreDashPlayerState\n{\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule.PlayerAttachedData",
+            "memberKind": "field",
+            "memberName": "StartDashCount",
+            "part": "full",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "Runtime/MoreDashColor.cs",
+      "sha256": "cba1f79195f22ceca48016498bb9c05fdaf458e0eb1fa1eadd2f918715f3d797",
+      "segments": [
+        {
+          "literal": "using System;\nusing System.Collections.Generic;\nusing System.Globalization;\nusing System.Reflection;\nusing Celeste.Core.Display;\nnamespace Celeste.Mods.MoreDasheline.Runtime;\npublic static class MoreDashColor\n{\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "ColorHelper",
+            "type": "MoreDasheline.ColorHelper",
+            "memberKind": "field",
+            "memberName": "colorProps",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              },
+              "tokens": {
+                "ColorHelper": "MoreDashColor",
+                "GetColor": "Parse"
+              },
+              "memberAccess": {
+                "Color.White": "PackedColor.White"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "ColorHelper",
+            "type": "MoreDasheline.ColorHelper",
+            "memberKind": "field",
+            "memberName": "cache",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              },
+              "tokens": {
+                "ColorHelper": "MoreDashColor",
+                "GetColor": "Parse"
+              },
+              "memberAccess": {
+                "Color.White": "PackedColor.White"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "ColorHelper",
+            "type": "MoreDasheline.ColorHelper",
+            "memberKind": "method",
+            "memberName": "GetColor",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              },
+              "tokens": {
+                "ColorHelper": "MoreDashColor",
+                "GetColor": "Parse"
+              },
+              "memberAccess": {
+                "Color.White": "PackedColor.White"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "ColorHelper",
+            "type": "MoreDasheline.ColorHelper",
+            "memberKind": "constructor",
+            "memberName": "ColorHelper",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              },
+              "tokens": {
+                "ColorHelper": "MoreDashColor",
+                "GetColor": "Parse"
+              },
+              "memberAccess": {
+                "Color.White": "PackedColor.White"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "Modules/MoreDashelineModule.cs",
+      "sha256": "52de960e4d82d255ba443fa95307f9e74b1d7022c14a74413fdf0501987c453f",
+      "segments": [
+        {
+          "literal": "using System;\nusing System.Runtime.CompilerServices;\nusing Celeste.Core.Scheduling;\nusing Celeste.Everest.Modules.Runtime;\nusing Celeste.Mods.MoreDasheline.Configuration;\nusing Celeste.Mods.MoreDasheline.Runtime;\n\nnamespace Celeste.Mods.MoreDasheline.Modules\n{\n    public sealed class MoreDashelineModule : SourceEverestModule\n    {\n        private static readonly ConditionalWeakTable<ISourceEngineContext, MoreDashelineModule> modules = new();\n        private MoreDashPlayerHooks hooks;\n\n        internal readonly ConditionalWeakTable<Celeste.Simulation.RoomPlayerSession, MoreDashPlayerState>\n            PlayerHistory = new();\n\n        internal bool CapturedOverrideHairColor;\n\n        public MoreDashelineModule(ISourceEngineContext engine) : base(engine)\n        {\n        }\n\n        public ISourceEngineContext Engine => SourceEngine;\n        public MoreDashSettings Settings => (MoreDashSettings)_Settings;\n        public MoreDashSession Session => (MoreDashSession)_Session;\n        public override Type SessionType => typeof(MoreDashSession);\n        public override Type SettingsType => typeof(MoreDashSettings);\n\n        public static MoreDashelineModule For(ISourceEngineContext engine) =>\n            modules.TryGetValue(engine, out var module)\n                ? module\n                : throw new InvalidOperationException(\"MoreDasheline is not loaded for this engine.\");\n\n        public override void Load()\n        {\n            modules.Add(SourceEngine, this);\n            try\n            {\n                hooks = new MoreDashPlayerHooks(this);\n            }\n            catch\n            {\n                modules.Remove(SourceEngine);\n                throw;\n            }\n        }\n\n        public override void Unload()\n        {\n            hooks?.Dispose();\n            hooks = null;\n            modules.Remove(SourceEngine);\n        }\n\n"
+        },
+        {
+          "literal": "        public void SetDashColor(int dashCount, Celeste.Core.Display.PackedColor color)\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "SetDashColor",
+            "part": "body",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "MoreDashelineSession": "MoreDashSession"
+              },
+              "memberAccess": {
+                "Color.Transparent": "Celeste.Core.Display.PackedColor.Transparent"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n\n"
+        },
+        {
+          "literal": "        public void ResetDashColor(int dashCount)\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "ResetDashColor",
+            "part": "body",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "MoreDashelineSession": "MoreDashSession"
+              },
+              "memberAccess": {
+                "Color.Transparent": "Celeste.Core.Display.PackedColor.Transparent"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n\n"
+        },
+        {
+          "literal": "        public bool IsDashCountOverridden(int dashCount)\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "IsDashCountOveridden",
+            "part": "body",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "MoreDashelineSession": "MoreDashSession"
+              },
+              "memberAccess": {
+                "Color.Transparent": "Celeste.Core.Display.PackedColor.Transparent"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n\n"
+        },
+        {
+          "literal": "        internal bool TryGetOverriddenColor(int dashCount, out Celeste.Core.Display.PackedColor color)\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "TryGetOveriddenColor",
+            "part": "body",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "MoreDashelineSession": "MoreDashSession"
+              },
+              "memberAccess": {
+                "Color.Transparent": "Celeste.Core.Display.PackedColor.Transparent"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n\n"
+        },
+        {
+          "literal": "    }\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "Runtime/MoreDashPlayerHooks.cs",
+      "sha256": "48a335b2c81859c904a2f90af7256c2baba01b913c3209e3edad9fbc76023d29",
+      "segments": [
+        {
+          "literal": "using System;\nusing System.Collections.Generic;\nusing System.Reflection;\nusing System.Runtime.CompilerServices;\nusing Celeste.Core.Display;\nusing Celeste.Everest.Content.Reloading;\nusing Celeste.Game.Execution.LevelLoader;\nusing Celeste.Game.Execution.Levels;\nusing Celeste.Graphics.Display.Colors;\nusing Celeste.Mods.MoreDasheline.Modules;\nusing Celeste.Simulation;\nusing Celeste.Simulation.Gameplay.Player.Presentation.Hair;\nusing Celeste.Simulation.Gameplay.Player.Presentation.Sprites;\nusing MonoMod.RuntimeDetour;\n\nnamespace Celeste.Mods.MoreDasheline.Runtime\n{\n    public sealed class MoreDashPlayerHooks : IDisposable\n    {\n        private readonly List<IDisposable> hooks = new();\n        private readonly MoreDashelineModule module;\n\n        public MoreDashPlayerHooks(MoreDashelineModule module)\n        {\n            this.module = module;\n            try\n            {\n                hooks.Add(new Hook(Method(\"Update\"), (Action<Action<RoomPlayerSession>, RoomPlayerSession>)Update));\n                hooks.Add(new Hook(Method(\"StartDash\"),\n                    (Func<Func<RoomPlayerSession, int>, RoomPlayerSession, int>)StartDash));\n                hooks.Add(new Hook(Method(\"GetTrailColor\"),\n                    (Func<Func<RoomPlayerSession, bool, PackedColor>, RoomPlayerSession, bool, PackedColor>)\n                    GetTrailColor));\n            }\n            catch\n            {\n                Dispose();\n                throw;\n            }\n        }\n\n        private static MethodInfo Method(string name) => typeof(RoomPlayerSession).GetMethod(name,\n                                                             BindingFlags.Instance | BindingFlags.Public |\n                                                             BindingFlags.NonPublic | BindingFlags.DeclaredOnly)\n                                                         ?? throw new MissingMethodException(\n                                                             typeof(RoomPlayerSession).FullName, name);\n\n"
+        },
+        {
+          "literal": "        private int StartDash(Func<RoomPlayerSession, int> orig, RoomPlayerSession player)\n        {\n            if (!ReferenceEquals(player.EngineContext, module.Engine))\n            { return orig(player); }\n"
+        },
+        {
+          "indent": 3,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "Player_StartDash",
+            "part": "statements",
+            "format": "normalize",
+            "maps": {
+              "identifiers": {
+                "self": "player",
+                "capturedOverrideHairColor": "module.CapturedOverrideHairColor",
+                "IsDashCountOveridden": "module.IsDashCountOverridden"
+              },
+              "types": {
+                "PlayerAttachedData": "MoreDashPlayerState"
+              },
+              "memberAccess": {
+                "self.Dashes": "player.Data.Dashes",
+                "self.hairFlashTimer": "player.Appearance.HairFlashTimer",
+                "self.lastDashes": "player.Appearance.LastDashes",
+                "Engine.DeltaTime": "module.Engine.DeltaTime",
+                "Celeste.Player.FlashHairColor": "PlayerHairAppearance.FlashHairColor"
+              },
+              "expressions": {
+                "self.GetAttached<PlayerAttachedData>()": "module.PlayerHistory.GetOrCreateValue(player)"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n        }\n\n"
+        },
+        {
+          "literal": "        private PackedColor GetTrailColor(Func<RoomPlayerSession, bool, PackedColor> orig, RoomPlayerSession player, bool wasDashB)\n        {\n            if (!ReferenceEquals(player.EngineContext, module.Engine))\n            { return orig(player, wasDashB); }\n"
+        },
+        {
+          "indent": 3,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "Player_GetTrailColor",
+            "part": "statements",
+            "format": "normalize",
+            "maps": {
+              "identifiers": {
+                "self": "player",
+                "capturedOverrideHairColor": "module.CapturedOverrideHairColor",
+                "IsDashCountOveridden": "module.IsDashCountOverridden"
+              },
+              "types": {
+                "PlayerAttachedData": "MoreDashPlayerState"
+              },
+              "memberAccess": {
+                "self.Dashes": "player.Data.Dashes",
+                "self.hairFlashTimer": "player.Appearance.HairFlashTimer",
+                "self.lastDashes": "player.Appearance.LastDashes",
+                "Engine.DeltaTime": "module.Engine.DeltaTime",
+                "Celeste.Player.FlashHairColor": "PlayerHairAppearance.FlashHairColor"
+              },
+              "expressions": {
+                "self.GetAttached<PlayerAttachedData>()": "module.PlayerHistory.GetOrCreateValue(player)"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n        }\n\n"
+        },
+        {
+          "literal": "        private void Update(Action<RoomPlayerSession> orig, RoomPlayerSession player)\n        {\n            if (!ReferenceEquals(player.EngineContext, module.Engine))\n            { orig(player); return; }\n"
+        },
+        {
+          "indent": 3,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "Player_Update",
+            "part": "statements",
+            "format": "normalize",
+            "maps": {
+              "identifiers": {
+                "self": "player",
+                "capturedOverrideHairColor": "module.CapturedOverrideHairColor",
+                "IsDashCountOveridden": "module.IsDashCountOverridden"
+              },
+              "types": {
+                "PlayerAttachedData": "MoreDashPlayerState"
+              },
+              "memberAccess": {
+                "self.Dashes": "player.Data.Dashes",
+                "self.hairFlashTimer": "player.Appearance.HairFlashTimer",
+                "self.lastDashes": "player.Appearance.LastDashes",
+                "Engine.DeltaTime": "module.Engine.DeltaTime",
+                "Celeste.Player.FlashHairColor": "PlayerHairAppearance.FlashHairColor"
+              },
+              "expressions": {
+                "self.GetAttached<PlayerAttachedData>()": "module.PlayerHistory.GetOrCreateValue(player)"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n        }\n\n"
+        },
+        {
+          "literal": "        public PackedColor GetDashColor(int dashCount, bool badeline)\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "GetDashColor",
+            "part": "body",
+            "format": "normalize",
+            "maps": {
+              "identifiers": {
+                "Settings": "module.Settings",
+                "TryGetOveriddenColor": "module.TryGetOverriddenColor"
+              },
+              "types": {
+                "Celeste.Level": "OriginalLevelSceneRoot",
+                "Celeste.Session": "Celeste.Simulation.Runtime.Session.ChapterCompletionSession"
+              },
+              "memberAccess": {
+                "Engine.Scene": "module.Engine.Frame.Scenes.CurrentScene",
+                "Celeste.Player.NormalHairColor": "PlayerHairAppearance.NormalHairColor",
+                "Celeste.Player.NormalBadelineHairColor": "PlayerHairAppearance.NormalBadelineHairColor",
+                "Celeste.Player.UsedHairColor": "PlayerHairAppearance.UsedHairColor",
+                "Celeste.Player.UsedBadelineHairColor": "PlayerHairAppearance.UsedBadelineHairColor",
+                "Celeste.Player.TwoDashesHairColor": "PlayerHairAppearance.TwoDashesHairColor",
+                "Celeste.Player.TwoDashesBadelineHairColor": "PlayerHairAppearance.TwoDashesBadelineHairColor"
+              },
+              "invocations": {
+                "Calc.HexToColor": "SourceHexColor.HexToColor"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n\n"
+        },
+        {
+          "literal": "        public PackedColor GetHairColor(RoomPlayerSession player, int dashes)\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "GetHairColor",
+            "part": "body",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n\n"
+        },
+        {
+          "literal": "        private OriginalLevelSceneRoot GetCurrentLevel()\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MoreDashelineModule",
+            "type": "MoreDasheline.MoreDashelineModule",
+            "memberKind": "method",
+            "memberName": "GetCurrentLevel",
+            "part": "body",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Scene": "object",
+                "Celeste.Level": "OriginalLevelSceneRoot",
+                "Celeste.LevelLoader": "OriginalLevelLoaderScene",
+                "AssetReloadHelper": "EverestAssetReloadScene"
+              },
+              "memberAccess": {
+                "Engine.Scene": "module.Engine.Frame.Scenes.CurrentScene",
+                "AssetReloadHelper.ReturnToScene": "((IEverestAssetReloadEnvironment)module.Engine).AssetReload.ReturnToScene"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n\n        public void Dispose()\n        {\n            for (int i = hooks.Count - 1; i >= 0; i--) hooks[i].Dispose();\n            hooks.Clear();\n        }\n    }\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "Triggers/HairColorTrigger.cs",
+      "sha256": "a8aedf81608105e0ccb4eba3242cef0ed7c829afc550841d2a131bc3214eaf97",
+      "segments": [
+        {
+          "literal": "using Celeste.Core.Components;\nusing System.Numerics;\nusing Celeste.Core.Scheduling;\nusing Celeste.Core.Reflection.Runtime;\nusing Celeste.Core.Mathematics.Extrema;\nusing Celeste.Everest.Modules.Entities.Metadata;\nusing Celeste.Formats.Map.Entities.Structure;\nusing Celeste.Formats.Map.Entities.Attributes;\nusing Celeste.Game.Content.Maps.Entities;\nusing Celeste.Game.Content.Maps.Levels;\nusing Celeste.Game.Execution.Levels;\nusing Celeste.Simulation;\nusing Celeste.Simulation.Gameplay.Triggers.Foundation;\nusing Celeste.Mods.MoreDasheline.Modules;\nusing Celeste.Mods.MoreDasheline.Runtime;\n\nusing Celeste.Simulation.Runtime.Session;\nusing Celeste.Core.Display;\n\nnamespace Celeste.Mods.MoreDasheline.Triggers;\n"
+        },
+        {
+          "indent": 0,
+          "source": {
+            "input": "HairColorTrigger",
+            "type": "MoreDasheline.HairColorTrigger",
+            "memberKind": "class",
+            "memberName": "HairColorTrigger",
+            "part": "attributes",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n[RuntimeTypeAlias(\"MoreDasheline.HairColorTrigger\")]\npublic sealed class HairColorTrigger : SourceTriggerEntityState\n{\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "HairColorTrigger",
+            "type": "MoreDasheline.HairColorTrigger",
+            "memberKind": "field",
+            "memberName": "dashes",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "HairColorTrigger",
+            "type": "MoreDasheline.HairColorTrigger",
+            "memberKind": "field",
+            "memberName": "color",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "HairColorTrigger",
+            "type": "MoreDasheline.HairColorTrigger",
+            "memberKind": "field",
+            "memberName": "reset",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "literal": "    private readonly MoreDashelineModule module;\n"
+        },
+        {
+          "literal": "        public static Celeste.Scene.Entities.SceneEntityState Load(OriginalLevelSceneRoot level,\n            OriginalLevelRoomData room,\n            Vector2 offset, OriginalLevelEntityData data) => new HairColorTrigger(level.EngineContext, data, offset);\n\n"
+        },
+        {
+          "literal": "    public HairColorTrigger(ISourceEngineContext engine, EntityData data, Vector2 offset)\n        : base(((ISourceEntitySourceDataEnvironment)engine).EntitySourceDataRegistration,\n            data.Position + offset, data.Width, data.Height,\n            ((ISourceExtremaEnvironment)engine).ExtremaArithmetic)\n    {\n"
+        },
+        {
+          "literal": "        module = MoreDashelineModule.For(engine);\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "HairColorTrigger",
+            "type": "MoreDasheline.HairColorTrigger",
+            "memberKind": "constructor",
+            "memberName": "HairColorTrigger",
+            "part": "statements",
+            "format": "normalize",
+            "maps": {
+              "invocations": {
+                "ColorHelper.GetColor": "MoreDashColor.Parse"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n    }\n\n"
+        },
+        {
+          "literal": "    public override void OnEnter(RoomPlayerSession player)\n    {\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "HairColorTrigger",
+            "type": "MoreDasheline.HairColorTrigger",
+            "memberKind": "method",
+            "memberName": "OnEnter",
+            "part": "statements",
+            "format": "normalize",
+            "maps": {
+              "invocations": {
+                "MoreDashelineModule.SetDashColor": "module.SetDashColor",
+                "MoreDashelineModule.ResetDashColor": "module.ResetDashColor"
+              },
+              "types": {
+                "Session": "ChapterCompletionSession"
+              },
+              "expressions": {
+                "player.SceneAs<Level>()": "(player.Scene as OriginalLevelSceneRoot)"
+              },
+              "assignmentCalls": {
+                "session.Inventory.Dashes": "SetInventoryDashes"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n    }\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "Triggers/MaxDashTrigger.cs",
+      "sha256": "6d9732db30b896c718c588be128bc8a523334755c62c4fc610258c9e1cfd4bca",
+      "segments": [
+        {
+          "literal": "using Celeste.Core.Components;\nusing System.Numerics;\nusing Celeste.Core.Scheduling;\nusing Celeste.Core.Reflection.Runtime;\nusing Celeste.Core.Mathematics.Extrema;\nusing Celeste.Everest.Modules.Entities.Metadata;\nusing Celeste.Formats.Map.Entities.Structure;\nusing Celeste.Formats.Map.Entities.Attributes;\nusing Celeste.Game.Content.Maps.Entities;\nusing Celeste.Game.Content.Maps.Levels;\nusing Celeste.Game.Execution.Levels;\nusing Celeste.Simulation;\nusing Celeste.Simulation.Gameplay.Triggers.Foundation;\nusing Celeste.Mods.MoreDasheline.Modules;\nusing Celeste.Mods.MoreDasheline.Runtime;\n\nusing Celeste.Simulation.Runtime.Session;\nusing Celeste.Core.Display;\n\nnamespace Celeste.Mods.MoreDasheline.Triggers;\n"
+        },
+        {
+          "indent": 0,
+          "source": {
+            "input": "MaxDashTrigger",
+            "type": "MoreDasheline.MaxDashTrigger",
+            "memberKind": "class",
+            "memberName": "MaxDashTrigger",
+            "part": "attributes",
+            "format": "normalize",
+            "maps": {}
+          }
+        },
+        {
+          "literal": "\n[RuntimeTypeAlias(\"MoreDasheline.MaxDashTrigger\")]\npublic sealed class MaxDashTrigger : SourceTriggerEntityState\n{\n"
+        },
+        {
+          "indent": 1,
+          "source": {
+            "input": "MaxDashTrigger",
+            "type": "MoreDasheline.MaxDashTrigger",
+            "memberKind": "field",
+            "memberName": "dashes",
+            "part": "full",
+            "format": "normalize",
+            "maps": {
+              "types": {
+                "Color": "PackedColor"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n"
+        },
+        {
+          "literal": "        public static Celeste.Scene.Entities.SceneEntityState Load(OriginalLevelSceneRoot level,\n            OriginalLevelRoomData room,\n            Vector2 offset, OriginalLevelEntityData data) => new MaxDashTrigger(level.EngineContext, data, offset);\n\n"
+        },
+        {
+          "literal": "    public MaxDashTrigger(ISourceEngineContext engine, EntityData data, Vector2 offset)\n        : base(((ISourceEntitySourceDataEnvironment)engine).EntitySourceDataRegistration,\n            data.Position + offset, data.Width, data.Height,\n            ((ISourceExtremaEnvironment)engine).ExtremaArithmetic)\n    {\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MaxDashTrigger",
+            "type": "MoreDasheline.MaxDashTrigger",
+            "memberKind": "constructor",
+            "memberName": "MaxDashTrigger",
+            "part": "statements",
+            "format": "normalize",
+            "maps": {
+              "invocations": {
+                "ColorHelper.GetColor": "MoreDashColor.Parse"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n    }\n\n"
+        },
+        {
+          "literal": "    public override void OnEnter(RoomPlayerSession player)\n    {\n"
+        },
+        {
+          "indent": 2,
+          "source": {
+            "input": "MaxDashTrigger",
+            "type": "MoreDasheline.MaxDashTrigger",
+            "memberKind": "method",
+            "memberName": "OnEnter",
+            "part": "statements",
+            "format": "normalize",
+            "maps": {
+              "invocations": {
+                "MoreDashelineModule.SetDashColor": "module.SetDashColor",
+                "MoreDashelineModule.ResetDashColor": "module.ResetDashColor"
+              },
+              "types": {
+                "Session": "ChapterCompletionSession"
+              },
+              "expressions": {
+                "player.SceneAs<Level>()": "(player.Scene as OriginalLevelSceneRoot)"
+              },
+              "assignmentCalls": {
+                "session.Inventory.Dashes": "SetInventoryDashes"
+              }
+            }
+          }
+        },
+        {
+          "literal": "\n        void SetInventoryDashes(int value)\n        {\n            var inventory = session.Inventory;\n            inventory.Dashes = value;\n            session.Inventory = inventory;\n        }\n"
+        },
+        {
+          "literal": "\n    }\n}\n"
+        }
+      ]
+    },
+    {
+      "path": "Celeste.Mods.MoreDasheline.csproj",
+      "sha256": "cab7890d05480330ae5e8c8b733e817039088595288f83ba71498c3eedb7809e",
+      "segments": [
+        {
+          "literal": "<Project Sdk=\"Microsoft.NET.Sdk\">\n  <PropertyGroup>\n    <TargetFramework>netstandard2.1</TargetFramework>\n    <LangVersion>latest</LangVersion>\n    <Nullable>disable</Nullable>\n    <AssemblyName>Celeste.Mods.MoreDasheline</AssemblyName>\n    <SharedBinaryDirectory>$(SharedRoot)/src/Celeste.Everest/bin/Release/netstandard2.1</SharedBinaryDirectory>\n  </PropertyGroup>\n  <ItemGroup>\n    <Reference Include=\"$(SharedBinaryDirectory)/Celeste.*.dll\" Private=\"false\" />\n    <PackageReference Include=\"MonoMod.RuntimeDetour\" Version=\"25.3.6\" />\n  </ItemGroup>\n</Project>\n"
+        }
+      ]
+    }
+  ]
+}

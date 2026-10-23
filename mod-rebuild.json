@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "MoreDasheline",
+  "version": "1.7.1",
+  "mode": "local-rebuild",
+  "archive": {
+    "path": "MoreDasheline.zip",
+    "sha256": "f29173e525f9c660503aaf36d6c509d07e8ed048d4b060fb4da70f7e2d735a01",
+    "downloadUrl": "https://gamebanana.com/mmdl/1329041",
+    "fileId": 1329041
+  },
+  "originalAssembly": {
+    "entry": "Code/MoreDasheline/bin/net452/MoreDasheline.dll",
+    "sha256": "1f7df39b2233711f198863db32e3ed42099d41ee711e4f9875aacdc9b066acc9"
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "upstream": "https://gamebanana.com/mods/53660",
+  "recipe": "Recipe/recipe.json",
+  "assemblyName": "Celeste.Mods.MoreDasheline",
+  "dependencies": [],
+  "decompileTypes": [
+    {
+      "sha256": "4ac7c640fe63f888a104cbb908985d39e158bfabd1dea6e27859bb8f736e4f46",
+      "path": "MoreDasheline.MoreDashModuleSettings.decompiled.cs",
+      "name": "MoreDasheline.MoreDashModuleSettings"
+    },
+    {
+      "sha256": "91c31a20530aaec4d2737a68caa15b5aa1e17d2167e73a7a1740fab5accdc362",
+      "path": "MoreDasheline.MoreDashelineSession.decompiled.cs",
+      "name": "MoreDasheline.MoreDashelineSession"
+    },
+    {
+      "sha256": "1bb1122693de0e79f44af692b329eadb58bd561d79cb113f69010dafd69758a1",
+      "path": "MoreDasheline.HairColorTrigger.decompiled.cs",
+      "name": "MoreDasheline.HairColorTrigger"
+    },
+    {
+      "sha256": "dd68ba23285e1701492a30f65c182366d7a331850042b533b23452697c81dd2b",
+      "path": "MoreDasheline.MaxDashTrigger.decompiled.cs",
+      "name": "MoreDasheline.MaxDashTrigger"
+    },
+    {
+      "sha256": "9c417790bbcf1be8fb2b595d9908156ac7e786f1976907536397d9dd1634c69a",
+      "path": "MoreDasheline.MoreDashelineModule.decompiled.cs",
+      "name": "MoreDasheline.MoreDashelineModule"
+    },
+    {
+      "sha256": "ad33cd257b78be6d56ea57da52a813f9e9e909463d8a63884ca6a24e2a548edb",
+      "path": "MoreDasheline.ColorHelper.decompiled.cs",
+      "name": "MoreDasheline.ColorHelper"
+    }
+  ]
+}
